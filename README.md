@@ -48,8 +48,10 @@ Alphabet Soup, a nonprofit foundation needed a tool to help them select applican
 
 -I decided a more efficient way to achieve the desired accuracy score was to create a method to find the hyperparameters for a model. I imported keras-tuner and built a method to loop through each activation type, the inital hidden layer neuron number, and well ad additional hidden layers and neurons. 
 -This method was computationally expensive, so I used a smaller number of epochs(50). 
--With this method, I was able to get the parameters to build a model that predicted an accuracy above 75%.
- 
+-With this method, I still was not able to get the parameters to build a model that predicted an accuracy above 75%. The accuracy was about 74%. 
+-If I had the time and computability to optimize this model I would likely next see how adding back in the columns I dropped effected the model. Potentially with an added feature, the model would be more accurate.  
+-The optimized model had 4 hidden layers all using the sigmoid activation. The number of neurons per layer in order: 71,6,26,16,16. 
+
 ## Summary
 
-The automatically optimized trained model using keras tuner acheived a 
+The automatically optimized trained model using keras tuner acheived the highest accuracy of all my models. It still did not acheive a 75% accuracy. In order to solve this problem, I would reprocess my data and add in one or both of the columns I had dropped. I would likely begin adding the 'NAME' column in as that would provide the model with another feature to test on.
